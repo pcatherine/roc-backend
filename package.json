@@ -1,0 +1,39 @@
+{
+  "name": "roc-backend",
+  "version": "0.0.1",
+  "description": "Renew or Cancel - Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run apidoc && node index.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Paolla Catherine <paollacath@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "^0.17.7",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^6.1.0",
+    "event-stream": "^4.0.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "initialize": "^7.3.1",
+    "moment": "^2.22.2",
+    "mysql2": "^1.6.4",
+    "node-cron": "^2.0.3",
+    "node-pre-gyp": "^0.13.0",
+    "pg": "^7.14.0",
+    "sequelize": "^5.21.2",
+    "tedious": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
