@@ -53,15 +53,14 @@ module.exports = app => {
      */
     .get(async (req, res) => {
 
-      TVShow.findAll({
+      TVShowGenre.findAll({
         include: [{
-          model: TVShowGenre,
-          include:[{
-            model: Genre
-          }]
+          model: TVShow,
+        }, {
+          model: Genre,
         }],
         order: [
-          ["name"]
+          [TVShow, "name"]
         ],
       }).then(results => {
         return res.status(200).json(results);
@@ -89,7 +88,7 @@ module.exports = app => {
       TVShow.findOne({
         include: [{
           model: TVShowGenre,
-          include:[{
+          include: [{
             model: Genre
           }]
         }],
